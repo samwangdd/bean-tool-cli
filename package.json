@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -m commonjs --outDir ./lib",
-    "prepublishOnly": ""
+    "prepublishOnly": "yarn build && np --no-cleanup"
   },
   "bin": {
     "dojo": "./lib/index.js"
@@ -23,6 +23,7 @@
     "handlebars": "^4.7.6",
     "inquirer": "^7.1.0",
     "log-symbols": "^3.0.0",
+    "np": "^6.2.1",
     "ora": "^4.0.3"
   }
 }
