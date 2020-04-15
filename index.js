@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const fs = require('fs');
 const program = require('commander');
 const downloads = require('download-git-repo');
@@ -18,7 +19,7 @@ program
       ]).then((answers) => { 
         const spinner = ora('正在下载模板...');
         spinner.start();
-        downloads('https://github.com/samwangdd/vue_shoppingmall.git', name, {clone: 'true'}, (err) => {
+        downloads('https://github.com:samwangdd/vue_shoppingmall#master', name, {clone: 'true'}, (err) => {
           if (err) {
             spinner.fail();
             console.log(symbols.error, chalk.red(err));
@@ -35,7 +36,7 @@ program
               const result = handlebars.compile(content)(meta);
               fs.writeFileSync(fileName, result);
             }
-            console.log(symbols.succeed, chalk.succeed('项目初始化完成！'));
+            console.log(symbols.succeed, chalk.green('项目初始化完成！'));
           }
         })
       });
