@@ -36,12 +36,12 @@ program
               const result = handlebars.compile(content)(meta);
               fs.writeFileSync(fileName, result);
             }
-            console.log(symbols.succeed, chalk.green('项目初始化完成！'));
+            console.log(symbols.success, chalk.green('项目初始化完成！'));
           }
         })
       });
     }else{
-      console.log(symbols.err, chalk.red('项目已存在！'))
+      console.log(symbols.error, chalk.red('项目已存在！'))
     }
   })
 
