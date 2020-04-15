@@ -1,1 +1,27 @@
-node_modules
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/npm-debug.log*
+/yarn-error.log
+/package-lock.json
+/yarn.lock
+
+# production
+/dist
+/.docz
+/.doc
+/coverage
+/build
+/es
+# misc
+.DS_Store
+.vscode
+.idea
+
+# linting
+.eslintcache
+
+# umi
+.umi
+.umi-production
