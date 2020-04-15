@@ -1,12 +1,12 @@
-#! /usr/bin/env node
-const fs = require('fs');
-const program = require('commander');
-const downloads = require('download-git-repo');
-const inquirer = require('inquirer');
-const handlebars = require('Handlebars');
-const chalk = require('chalk');
-const ora = require('ora');
-const symbols = require('log-symbols');
+import fs from 'fs';
+import program from 'commander';
+import downloads from 'download-git-repo';
+import inquirer from 'inquirer';
+import handlebars from 'handlebars';
+import chalk from 'chalk';
+import ora from 'ora';
+import symbols from 'log-symbols';
+
 
 program
   .version('1.0.0', '-v, --version')
