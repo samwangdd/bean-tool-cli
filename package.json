@@ -1,5 +1,5 @@
 {
-  "name": "dojo-cli",
+  "name": "beans-cli",
   "version": "1.0.0",
   "description": "personal node cli",
   "main": "./lib/index.js",
@@ -12,7 +12,7 @@
     "dojo": "./lib/index.js"
   },
   "keywords": [
-    "dojo-cli"
+    "beans-cli"
   ],
   "author": "sam",
   "license": "ISC",
