@@ -2,20 +2,20 @@
   "name": "beans-cli",
   "version": "1.1.1",
   "description": "personal node cli",
-  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -m commonjs --outDir ./lib",
     "prepublishOnly": "yarn build && np --no-cleanup --yolo --any-branch"
   },
   "bin": {
-    "dojo": "./lib/index.js"
+    "struct": "./bin/struct"
   },
   "keywords": [
     "beans-cli"
   ],
   "author": "sam",
   "license": "ISC",
+  "private": true,
   "devDependencies": {
     "chalk": "^4.0.0",
     "commander": "^5.0.0",
