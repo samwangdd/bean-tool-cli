@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
     "declaration": true,
-    "target": "esnext",
-    "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "rootDir":"./src",
+    "outDir":"./lib",
+    "watch":true  
   },
+  "include":[
+    "./src"
+  ],
   "exclude": ["node_modules", "es", "lib", "dist"]
 }

@@ -1,48 +1,25 @@
-import fs from 'fs';
-import program from 'commander';
-import downloads from 'download-git-repo';
-import inquirer from 'inquirer';
-import handlebars from 'handlebars';
+import { program } from 'commander';
+import minimist from 'minimist';
 import chalk from 'chalk';
-import ora from 'ora';
-import symbols from 'log-symbols';
-
+import {cleanArgs} from './utils/string';
+import create from './command/create';
 
 program
-  .version('1.0.0', '-v, --version')
-  .command('init <name>')
-  .description('初始化项目')
-  .action((name) => {
-    if (!fs.existsSync(name)) {
-      inquirer.prompt([
-        {type: 'input', name: 'author', message: '请输入创建者名称'}
-      ]).then((answers) => { 
-        const spinner = ora('正在下载模板...');
-        spinner.start();
-        downloads('https://github.com:samwangdd/vue_shoppingmall#master', name, {clone: 'true'}, (err) => {
-          if (err) {
-            spinner.fail();
-            console.log(symbols.error, chalk.red(err));
-          }else{
-            spinner.succeed();
-            const fileName = `${name}/package.json`;
-            const meta = {
-              name,
-              description: answers.description,
-              author: answers.author
-            };
-            if (fs.existsSync(fileName)) {
-              const content = fs.readFileSync(fileName).toString();
-              const result = handlebars.compile(content)(meta);
-              fs.writeFileSync(fileName, result);
-            }
-            console.log(symbols.success, chalk.green('项目初始化完成！'));
-          }
-        })
-      });
-    }else{
-      console.log(symbols.error, chalk.red('项目已存在！'))
-    }
-  })
+  .version(require('../package').version)     //  显示版本号
+  .usage('<command> [options]');
 
-program.parse(process.argv);
+program.command('list').description('当前所有模版').action(require('../lib/list'));
+program.command('add').description('添加模版').action(require('../lib/add'));
+program.command('delete').description('删除模版').action(require('../lib/delete'));
+
+program.command('create <app-name>')
+.description('create a new project')
+.option('-p, --preset <presetName>','Skip prompts and use saved or remote preset')
+.option('-d, --default', 'Skip prompts and use default preset')
+.action((name, cmd) => {
+  const options = cleanArgs(cmd)
+  if (minimist(process.argv.slice(3))._.length > 1) {
+    console.log(chalk.yellow('\n ⚠️ 检测到您输入了多个名称，将以第一个参数为项目名'));
+  }
+  create(name, options)
+})
