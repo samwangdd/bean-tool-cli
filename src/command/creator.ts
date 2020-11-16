@@ -9,7 +9,7 @@ import chalk from 'chalk';
 import ora from 'ora';
 import symbols from 'log-symbols';
 
-program
+export default program
   .version('1.0.0', '-v, --version')
   .command('init <name>')
   .description('初始化项目')
