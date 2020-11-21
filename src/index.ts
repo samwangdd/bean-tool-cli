@@ -13,8 +13,8 @@ program
   .usage('<command> [options]');
 
 program.command('list').description('当前所有模版').action(list());
-program.command('add').description('添加模版').action(add());
-program.command('delete').description('删除模版').action(remove());
+// program.command('add').description('添加模版').action(add());
+// program.command('delete').description('删除模版').action(remove());
 
 // program
 //   .command('create <app-name>')
