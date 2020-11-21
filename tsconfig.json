@@ -1,22 +1,18 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "es6",
+    "module": "commonjs",
     "declaration": true,
     "moduleResolution": "node",
-    "jsx": "react",
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "rootDir":"./src",
-    "outDir":"./lib",
-    "watch":true,
-    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "outDir": "./lib",
+    "baseUrl": "./",
     "paths": {
-      "~/*": ["./src/*"],
+      "~/*": ["./src/*"]
     },
+    "allowSyntheticDefaultImports": true
   },
-  "include":[
-    "./src"
-  ],
+  "include": ["./src"],
   "exclude": ["node_modules", "es", "lib", "dist"]
 }
