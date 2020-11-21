@@ -1,2 +1,1 @@
-declare const init: () => void;
-export default init;
+export declare const init: () => void;

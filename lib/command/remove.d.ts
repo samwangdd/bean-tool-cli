@@ -1,2 +1,1 @@
-declare const remove: () => void;
-export default remove;
+export declare const remove: () => any;

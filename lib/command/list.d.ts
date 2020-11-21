@@ -1,2 +1,1 @@
-declare const list: () => void;
-export default list;
+export declare const list: () => any;

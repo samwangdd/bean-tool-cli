@@ -1,2 +1,1 @@
-declare const add: () => void;
-export default add;
+export declare const add: () => any;
