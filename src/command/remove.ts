@@ -1,5 +1,3 @@
-const remove = () => {
+export const remove = (): any => {
   console.log('remove :>> ');
 };
-
-export default remove;

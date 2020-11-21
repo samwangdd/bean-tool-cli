@@ -1,5 +1,3 @@
-const list = () => {
-  console.log('list :>> ');
+export const list = (): any => {
+  return console.log('list :>> ');
 };
-
-export default list;

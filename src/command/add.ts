@@ -1,5 +1,3 @@
-const add = () => {
+export const add = (): any => {
   console.log('add :>> ');
 };
-
-export default add;
