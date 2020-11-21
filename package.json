@@ -1,9 +1,10 @@
 {
-  "name": "beans-cli",
+  "name": "wyp-cli",
   "version": "1.1.1",
   "description": "personal node cli",
   "main": "index.js",
   "scripts": {
+    "start": "tsc -p tsconfig.json -w",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -m commonjs --outDir ./lib",
     "prepublishOnly": "yarn build && np --no-cleanup --yolo --any-branch"
@@ -12,7 +13,7 @@
     "wyp": "bin/www"
   },
   "keywords": [
-    "beans-cli"
+    "wyp-cli"
   ],
   "author": "sam",
   "license": "ISC",
