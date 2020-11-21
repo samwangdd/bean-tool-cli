@@ -9,7 +9,11 @@
     "allowSyntheticDefaultImports": true,
     "rootDir":"./src",
     "outDir":"./lib",
-    "watch":true  
+    "watch":true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+    },
   },
   "include":[
     "./src"
