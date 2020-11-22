@@ -7,3 +7,10 @@ export class CommandLoader {
     new InitCommand(new InitAction()).load(program);
   }
 }
+
+export default class color {
+  constructor() {}
+  render() {
+    return 'red';
+  }
+}
