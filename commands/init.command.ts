@@ -8,7 +8,7 @@ export class InitCommand extends AbstarctCommand {
       .alias('i')
       .description('Init files form Git')
       .action(async (tpl: string, path: string) => {
-        let inputs: any = { path, tpl };
+        let inputs: any = { tpl, path };
         await this.action.handle(inputs);
       });
   }
