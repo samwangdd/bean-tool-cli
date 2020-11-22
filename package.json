@@ -5,9 +5,10 @@
   "main": "bin/wyp",
   "scripts": {
     "start": "ts-node bin/wyp.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -m commonjs --outDir ./lib",
-    "prepublishOnly": "yarn build && np --no-cleanup --yolo --any-branch"
+    "prepublishOnly": "yarn build && np --no-cleanup --yolo --any-branch",
+    "postPublish": "yarn build:clear",
+    "build:clear": ""
   },
   "bin": {
     "wyp": "bin/wyp"
@@ -23,6 +24,7 @@
     "chalk": "^4.0.0",
     "commander": "^5.0.0",
     "download-git-repo": "^3.0.2",
+    "gulp": "^4.0.2",
     "handlebars": "^4.7.6",
     "inquirer": "^7.1.0",
     "log-symbols": "^3.0.0",
