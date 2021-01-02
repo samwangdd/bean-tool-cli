@@ -7,9 +7,10 @@
     "skipLibCheck": true,
     "sourceMap": false,
     "strict": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./*"],
+      "@/*": ["./src/*"]
     },
     "allowSyntheticDefaultImports": true
   },

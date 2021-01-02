@@ -1,6 +1,13 @@
 import { Command, CommanderStatic } from 'commander';
 import { AbstarctCommand } from './abstract.command';
 
+/**
+ * 初始化命令
+ *
+ * @export
+ * @class InitCommand
+ * @extends {AbstarctCommand}
+ */
 export class InitCommand extends AbstarctCommand {
   public load(program: CommanderStatic) {
     program
