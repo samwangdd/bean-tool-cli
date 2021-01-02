@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "lib": ["es2017", "dom"],
     "module": "commonjs",
     "declaration": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "outDir": "./lib",
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strict": true,
     "baseUrl": "./",
     "paths": {
       "~/*": ["./src/*"]
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": ["./src"],
-  "exclude": ["node_modules", "es", "lib", "dist"]
+  "include": ["actions", "bin", "commands", "utils"],
+  "exclude": ["node_modules", "e2e", "doc"]
 }

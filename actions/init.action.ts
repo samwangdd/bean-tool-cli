@@ -1,12 +1,13 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 import ora from 'ora';
-import downloads from 'download-git-repo';
+// import downloads from 'download-git-repo';
 import symbols from 'log-symbols';
 import chalk from 'chalk';
 import handlebars from 'handlebars';
 import { AbstractAction } from './abstract.action';
 
+const downloads = require('download-git-repo');
 export class InitAction extends AbstractAction {
   public async handle(inputs: any) {
     console.log('inputs.tpl :>> ', inputs.tpl);
@@ -28,7 +29,7 @@ export class InitAction extends AbstractAction {
     }
     const spinner = ora('正在下载模板...');
     spinner.start();
-    downloads(inputs.path, name, { clone: 'true' }, err => {
+    downloads(inputs.path, name, { clone: 'true' }, (err: String) => {
       if (err) {
         spinner.fail();
         console.log(symbols.error, chalk.red(err));
