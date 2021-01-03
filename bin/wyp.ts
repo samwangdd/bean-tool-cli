@@ -9,14 +9,14 @@ const bootstrap = () => {
   const version = require('../package.json').version;
   const program: CommanderStatic = commander;
   program
-    ?.version(version)
+    ?.version(version, '-v, --version', 'Output the current version.')
     .usage('<command> [options]')
     .helpOption('-h, --help', 'Output usage information');
   CommandLoader.load(program);
   commander?.parse(process.argv);
 
-  if (!program?.args.length) {
-    program?.outputHelp();
+  if (!process.argv.slice(2).length) {
+    program.outputHelp();
   }
 };
 

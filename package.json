@@ -7,8 +7,8 @@
     "start": "ts-node bin/wyp.ts",
     "prepublishOnly": "yarn build && np --no-cleanup --yolo --any-branch",
     "postPublish": "yarn build:clear",
-    "build": "tsc -m commonjs --outDir ./lib",
-    "build:clear": "find ./actions ./bin ./commands ./utils ./ui ./component -type f -name '*.d.ts' -delete & find ./actions ./bin ./commands ./utils ./ui ./component -type f -not -name '*.ts*' -delete",
+    "build": "rm -rf ./lib & tsc -m commonjs --outDir ./lib",
+    "build:clear": "find ./lib -delete",
     "format": "prettier --write \"**/*.ts\"",
     "lint": "eslint '{lib,commands,actions}/**/*.ts' --fix"
   },
