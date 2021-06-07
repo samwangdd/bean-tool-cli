@@ -1,12 +1,19 @@
 module.exports = {
-  extends: ['eslint:recommended'],
-  settings: {
-    react: {
-      version: 'detect',
+  parser: '@typescript-eslint/parser',
+  extends: ['plugin:@typescript-eslint/recommended'],
+  plugins: ['@typescript-eslint'],
+  env: {
+    browser: true,
+    node: true,
+  },
+  parserOptions: {
+    ecmaVersion: 2019,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
     },
   },
   rules: {
-    'no-console': 0,
     'no-unused-vars': [
       2,
       {
@@ -15,8 +22,5 @@ module.exports = {
         ignoreRestSiblings: true,
       },
     ],
-    // careful check: https://stackoverflow.com/questions/13497971/what-is-the-matter-with-script-targeted-urls
-    'no-script-url': 0,
   },
-  parser: 'babel-eslint',
 };

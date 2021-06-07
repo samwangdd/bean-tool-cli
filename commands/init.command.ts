@@ -1,21 +1,21 @@
-import { Command, CommanderStatic } from 'commander';
-import { AbstarctCommand } from './abstract.command';
+import { CommanderStatic } from 'commander';
+import { AbstractCommand } from './abstract.command';
 
 /**
  * 初始化命令
  *
  * @export
  * @class InitCommand
- * @extends {AbstarctCommand}
+ * @extends {AbstractCommand}
  */
-export class InitCommand extends AbstarctCommand {
+export class InitCommand extends AbstractCommand {
   public load(program: CommanderStatic) {
     program
       ?.command('init [tpl] [path]')
       .alias('i')
-      .description('Init files form Git')
+      .description('Init your PC system.')
       .action(async (tpl: string, path: string) => {
-        let inputs: any = { tpl, path };
+        const inputs: any = { tpl, path };
         await this.action.handle(inputs);
       });
   }

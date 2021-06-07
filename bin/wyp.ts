@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 // https://github.com/nestjs/nest-cli/blob/master/bin/nest.ts
-console.log('dojo cli :>> ');
 import * as commander from 'commander';
 import { CommanderStatic } from 'commander';
 import { CommandLoader } from '../commands';
 
 const bootstrap = () => {
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const version = require('../package.json').version;
   const program: CommanderStatic = commander;
   program
