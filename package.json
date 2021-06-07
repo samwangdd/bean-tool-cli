@@ -1,10 +1,13 @@
 {
-  "name": "wyp",
+  "name": "dojo",
   "version": "1.1.1",
   "description": "personal node cli",
-  "main": "bin/wyp",
+  "main": "index.js",
+  "bin": {
+    "mvc": "./bin/mvc.js"
+  },
   "scripts": {
-    "start": "ts-node bin/wyp.ts",
+    "start": "node bin/mvc.js",
     "prepublishOnly": "yarn build && np --no-cleanup --yolo --any-branch",
     "postPublish": "yarn build:clear",
     "build": "rm -rf ./lib & tsc -m commonjs --outDir ./lib",
@@ -12,29 +15,24 @@
     "format": "prettier --write \"**/*.ts\"",
     "lint": "eslint '{lib,commands,actions}/**/*.ts' --fix"
   },
-  "bin": {
-    "wyp": "bin/wyp"
-  },
   "keywords": [
-    "wyp"
+    "mvc"
   ],
   "author": "sam",
   "license": "ISC",
   "private": false,
   "devDependencies": {
-    "@types/inquirer": "^7.3.1",
-    "@types/node": "^14.14.9",
     "chalk": "^4.0.0",
     "commander": "^5.0.0",
     "download-git-repo": "^3.0.2",
+    "elint": "^2.0.1",
+    "eslint-config-airbnb-base": "^14.2.1",
     "gulp": "^4.0.2",
     "handlebars": "^4.7.6",
     "inquirer": "^7.1.0",
     "log-symbols": "^3.0.0",
     "np": "^6.2.1",
-    "ora": "^4.0.3",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.1.2"
+    "ora": "^4.0.3"
   },
   "dependencies": {}
 }
