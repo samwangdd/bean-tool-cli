@@ -14,7 +14,6 @@
 /coverage
 /build
 /es
-/lib
 # misc
 .DS_Store
 .vscode
