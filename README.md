@@ -25,7 +25,7 @@
 │  │  ├─vue     # vue 模板
 │  │  ├─vuex    # vuex 模板
 │  │  └─webpack # webpack 模板
-│  ├─create.js  # create 命令处理函数
+│  ├─create.js  # create 命令处理函数，读取交互命令，注入模版，安装依赖
 │  ├─Creator.js # 处理交互提示
 │  ├─Generator.js # 渲染模板
 │  └─PromptModuleAPI.js # 将各个功能的提示语注入 Creator
