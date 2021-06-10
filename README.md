@@ -32,6 +32,13 @@
 └─scripts       # commit message 验证脚本 和项目无关 不需关注
 ```
 
+### 注入模版
+
+- Generator.js
+  - extendPackage() 合并依赖
+  - async generate() 生成配置
+    - extractConfigFiles() 提取 package.json 中的配置
+
 ## 参考链接
 
 - [从零搭建一个 node 脚手架工具](https://segmentfault.com/a/1190000019791588)
