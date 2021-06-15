@@ -25,12 +25,22 @@
 │  │  ├─vue     # vue 模板
 │  │  ├─vuex    # vuex 模板
 │  │  └─webpack # webpack 模板
-│  ├─create.js  # create 命令处理函数
+│  ├─create.js  # create 命令处理函数，读取交互命令，注入模版，安装依赖
 │  ├─Creator.js # 处理交互提示
 │  ├─Generator.js # 渲染模板
 │  └─PromptModuleAPI.js # 将各个功能的提示语注入 Creator
 └─scripts       # commit message 验证脚本 和项目无关 不需关注
 ```
+
+### 注入模版
+
+- Generator.js
+  - extendPackage() 合并依赖
+  - async generate() 生成配置
+    - extractConfigFiles() 提取 package.json 中的配置
+    - resolveFiles() 解析 lib\generator\xx\template 中的文件
+    - sortPkg() 依赖排序
+    - writeFileTree() 写入文件
 
 ## 参考链接
 
