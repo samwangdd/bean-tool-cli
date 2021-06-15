@@ -40,6 +40,7 @@
     - extractConfigFiles() 提取 package.json 中的配置
     - resolveFiles() 解析 lib\generator\xx\template 中的文件
     - sortPkg() 依赖排序
+    - writeFileTree() 写入文件
 
 ## 参考链接
 
