@@ -38,6 +38,8 @@
   - extendPackage() 合并依赖
   - async generate() 生成配置
     - extractConfigFiles() 提取 package.json 中的配置
+    - resolveFiles() 解析 lib\generator\xx\template 中的文件
+    - sortPkg() 依赖排序
 
 ## 参考链接
 
