@@ -42,6 +42,11 @@
     - sortPkg() 依赖排序
     - writeFileTree() 写入文件
 
+## TODO
+
+- [ ] script 脚本被覆盖
+- [ ] 安装依赖，无法显示 loading
+
 ## 参考链接
 
 - [从零搭建一个 node 脚手架工具](https://segmentfault.com/a/1190000019791588)
