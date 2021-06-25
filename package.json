@@ -15,6 +15,11 @@
     "format": "prettier --write \"**/*.ts\"",
     "lint": "eslint '{lib,commands,actions}/**/*.ts' --fix"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node scripts/verify-commit.js"
+    }
+  },
   "keywords": [
     "mvc"
   ],
@@ -23,7 +28,9 @@
   "private": false,
   "devDependencies": {
     "elint": "^2.0.1",
-    "eslint-config-airbnb-base": "^14.2.1"
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "husky": "^6.0.0"
   },
   "dependencies": {
     "chalk": "^4.1.1",
