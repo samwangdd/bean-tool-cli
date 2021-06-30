@@ -16,10 +16,10 @@
   "rules": {
     "no-console": "off",
     "array-element-newline": ["error", "consistent"],
-    "indent": ["error", 4, { "MemberExpression": 0, "SwitchCase": 1 }],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "comma-dangle": ["error", "always-multiline"],
-    "semi": ["error", "never"],
+    "semi": ["error", "always"],
     "object-curly-spacing": ["error", "always"],
     "max-len": ["error", 140],
     "no-new": "off",
@@ -68,6 +68,8 @@
     "no-await-in-loop": "off",
     "class-methods-use-this": "off",
     "no-return-assign": "off",
-    "no-return-await": "off"
+    "no-return-await": "off",
+    "operator-linebreak": ["error", "after"],
+    "implicit-arrow-linebreak": "off"
   }
 }
