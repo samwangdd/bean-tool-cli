@@ -2,6 +2,9 @@
   "name": "@mvc/cli",
   "version": "0.1.0",
   "description": "mvc cli",
+  "bin": {
+    "mvc": "bin/mvc.js"
+  },
   "keywords": [
     "cli"
   ],

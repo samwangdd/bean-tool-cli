@@ -1,10 +1,13 @@
 const stringifyJS = require('./stringifyJS');
+const { log } = require('./logger');
 
 const transformJS = {
   read: ({ filename, context }) => {
     try {
       return require(`./${filename}`, context, true); // require 有哪些参数？？
-    } catch (error) {}
+    } catch (error) {
+      log('transformJS', error);
+    }
   },
   write: ({ value }) => `module.exports = ${stringifyJS(value, null, 4)}`,
 };
