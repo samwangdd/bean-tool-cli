@@ -10,7 +10,6 @@ module.exports = generator => {
     },
   });
 
-  // TODO: ?? 为什么分开设置
   generator.extendPackage({
     browserslist: ['> 1%', 'last 2 versions', 'not dead'],
   });

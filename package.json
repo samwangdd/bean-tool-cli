@@ -1,57 +1,17 @@
 {
-  "name": "dojo",
-  "version": "1.1.1",
-  "description": "personal node cli",
+  "name": "demo",
+  "version": "0.1.0",
   "main": "index.js",
-  "bin": {
-    "mvc": "./bin/mvc.js"
-  },
-  "scripts": {
-    "start": "node bin/mvc.js",
-    "prepublishOnly": "yarn build && np --no-cleanup --yolo --any-branch",
-    "postPublish": "yarn build:clear",
-    "build": "rm -rf ./lib & tsc -m commonjs --outDir ./lib",
-    "build:clear": "find ./lib -delete",
-    "format": "prettier --write \"**/*.ts\"",
-    "lint": "eslint '{lib,commands,actions}/**/*.ts' --fix"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "node scripts/verify-commit.js"
-    }
-  },
-  "keywords": [
-    "mvc"
+  "workspaces": [
+    "packages/@mvc/*"
   ],
-  "author": "sam",
-  "license": "ISC",
-  "private": false,
+  "private": true,
+  "license": "MIT",
   "devDependencies": {
-    "elint": "^2.0.1",
+    "lerna": "^3.22.1",
+    "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.23.4",
-    "husky": "^6.0.0"
-  },
-  "dependencies": {
-    "chalk": "^4.1.1",
-    "commander": "^7.0.0",
-    "deepmerge": "^4.2.2",
-    "download-git-repo": "^3.0.2",
-    "ejs": "^3.1.6",
-    "execa": "^5.0.0",
-    "fs-extra": "^10.0.0",
-    "globby": "^11.0.2",
-    "gulp": "^4.0.2",
-    "handlebars": "^4.7.6",
-    "inquirer": "^7.3.3",
-    "isbinaryfile": "^4.0.6",
-    "javascript-stringify": "^2.0.1",
-    "lodash.clonedeep": "^4.5.0",
-    "log-symbols": "^3.0.0",
-    "np": "^6.2.1",
-    "ora": "^4.0.3",
-    "readline": "^1.3.0",
-    "recast": "^0.20.4",
-    "vue-codemod": "0.0.5"
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^4.3.0"
   }
 }
