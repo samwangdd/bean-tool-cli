@@ -1,12 +1,14 @@
 0 silly argv {
-0 silly argv   _: [ 'add' ],
-0 silly argv   scope: '@mvc/cli',
-0 silly argv   globs: [],
+0 silly argv   _: [ 'create' ],
 0 silly argv   lernaVersion: '3.22.1',
 0 silly argv   '$0': '/usr/local/bin/lerna',
-0 silly argv   pkg: '@mvc/cli-plugin-babel'
+0 silly argv   name: '@mvc'
 0 silly argv }
 1 notice cli v3.22.1
 2 verbose rootPath /Users/sam/CodeLab/dojo-cli
-3 error Error: 404 Not Found - GET https://registry.npmjs.com/@mvc%2fcli-plugin-babel - Not found
-3 error     at /Users/sam/CodeLab/dojo-cli/node_modules/@evocateur/npm-registry-fetch/check-response.js:104:15
+3 error Error: Invalid tag name "@mvc": Tags may not have any characters that encodeURIComponent encodes.
+3 error     at invalidTagName (/Users/sam/CodeLab/dojo-cli/node_modules/npm-package-arg/npa.js:91:15)
+3 error     at fromRegistry (/Users/sam/CodeLab/dojo-cli/node_modules/npm-package-arg/npa.js:296:13)
+3 error     at resolve (/Users/sam/CodeLab/dojo-cli/node_modules/npm-package-arg/npa.js:81:12)
+3 error     at npa (/Users/sam/CodeLab/dojo-cli/node_modules/npm-package-arg/npa.js:52:10)
+3 error     at CreateCommand.initialize (/Users/sam/CodeLab/dojo-cli/node_modules/@lerna/create/index.js:54:29)
