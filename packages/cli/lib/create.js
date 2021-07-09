@@ -78,7 +78,7 @@ async function create(name) {
   answers.features && answers.features.unshift('vue', 'webpack');
   answers.features &&
     answers.features.forEach(feature => {
-      require(`./generator/${feature}`)(generator, answers);
+      require(`@mvc/cli-plugin-${feature}/generator`)(generator, answers);
     });
   await generator.generate();
 

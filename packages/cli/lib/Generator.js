@@ -216,7 +216,7 @@ class Generator {
       if (imports && imports.length > 0) {
         files[file] = runTransformation(
           { path: file, source: files[file] },
-          require('../packages/cli/lib/utils/codemods/injectImports.js'),
+          require('./utils/codemods/injectImports.js'),
           { imports },
         );
       }
@@ -226,7 +226,7 @@ class Generator {
       if (injections && injections.length > 0) {
         files[file] = runTransformation(
           { path: file, source: files[file] },
-          require('../packages/cli/lib/utils/codemods/injectOptions'),
+          require('./utils/codemods/injectOptions'),
           { injections },
         );
       }
