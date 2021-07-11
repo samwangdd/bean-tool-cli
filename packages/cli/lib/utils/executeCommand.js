@@ -1,30 +1,28 @@
 const execa = require('execa');
 
 module.exports = function executeCommand(command, cwd) {
-  return new Promise(async (resolve, reject) => {
-    try {
-      const subprocess = execa(command, ['install'], {
-        cwd,
-        studio: ['inherit', 'pipe', 'inherit'],
-      });
-      subprocess.stdout.pipe(process.stdout);
+  return new Promise((resolve, reject) => {
+    const child = execa(command, ['install'], {
+      cwd,
+      studio: ['inherit', 'pipe', 'inherit'],
+    });
 
-      await subprocess;
-      const { exitCode } = subprocess;
-      if (exitCode !== 0) {
-        reject(new Error(`command failed: ${command}`));
+    child.stdout.on('data', buffer => {
+      const str = buffer.toString();
+      if (/warning/.test(str)) {
+        return;
       }
-    } catch (error) {
-      console.error('executeCommand: >>', error);
-    }
 
-    // TODO: 进程通信，将 stdout 进度返回给主进程
-    // if (child.stdout) {
-    //   console.log('child.stdout :>> ', child.stdout);
-    //   child.stdout.on('data', buffer => {
-    //     process.stdout.write(buffer);
-    //   });
-    // }
-    resolve();
+      process.stdout.write(buffer);
+    });
+
+    child.on('close', code => {
+      if (code !== 0) {
+        reject(new Error(`command failed: ${command}`));
+        return;
+      }
+
+      resolve();
+    });
   });
 };
