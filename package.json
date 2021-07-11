@@ -1,17 +1,17 @@
 {
   "name": "demo",
   "version": "0.1.0",
-  "main": "index.js",
-  "workspaces": [
-    "packages/*"
-  ],
   "private": true,
-  "license": "MIT",
+  "main": "index.js",
   "devDependencies": {
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "husky": "^4.3.0",
     "lerna": "^3.22.1"
-  }
+  },
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ]
 }

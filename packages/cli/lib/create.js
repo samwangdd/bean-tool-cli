@@ -84,7 +84,7 @@ async function create(name) {
 
   // TODO: 添加 loading
   console.log('\n正在下载依赖 ……\n');
-  await executeCommand('npm', path.join(process.cwd(), name));
+  await executeCommand('npm', ['install'], path.join(process.cwd(), name));
   log(chalk.green(`\n依赖下载完成！执行下列命令开始开发：\n`));
   log(`cd ${name}`);
   log(`npm run dev`);

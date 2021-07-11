@@ -1,8 +1,8 @@
 const execa = require('execa');
 
-module.exports = function executeCommand(command, cwd) {
+module.exports = function executeCommand(command, args, cwd) {
   return new Promise((resolve, reject) => {
-    const child = execa(command, ['install'], {
+    const child = execa(command, args, {
       cwd,
       studio: ['inherit', 'pipe', 'inherit'],
     });
