@@ -62,11 +62,11 @@ const ensureEOL = str => {
 };
 
 class Generator {
-  constructor(pkg, context) {
+  constructor(pkg, context, files = {}) {
     this.pkg = pkg; // package 信息，包含用户选择的依赖
     this.context = context;
     this.configTransforms = {};
-    this.files = {};
+    this.files = files;
     this.fileMiddlewares = [];
     this.imports = {};
     this.rootOptions = {};

@@ -1,6 +1,6 @@
+// REVIEW: ode require 依赖的查找顺序
 // 不需要单独安装 slash，否则运行报错
 // https://stackoverflow.com/questions/61558835/type-module-in-package-json-throw-new-err-require-esmfilename-parentpath
-// TODO: node require 依赖的查找顺序
 const slash = require('slash');
 
 // 转换 windows 反斜杠路径
