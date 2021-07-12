@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 const Generator = require('./Generator');
 const PackageManager = require('./PackageManager');
 const clearConsole = require('./utils/clearConsole');
@@ -10,10 +11,13 @@ async function add(name) {
 
   let answers = {};
   try {
+    // if (fs.existsSync(`@mvc/cli-plugin-${name}/prompts`)) {
     const pluginPrompts = require(`@mvc/cli-plugin-${name}/prompts`);
     answers = await inquirer.prompt(pluginPrompts);
+    // }
   } catch (error) {
-    console.log('Action add: ', error);
+    // FIXME: prompts.js 不存在会抛错
+    // console.log('Action add: ', error);
   }
 
   const targetDir = process.cwd();
