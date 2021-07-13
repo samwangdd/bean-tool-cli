@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
 const Generator = require('./Generator');
 const PackageManager = require('./PackageManager');
 const clearConsole = require('./utils/clearConsole');
