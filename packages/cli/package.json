@@ -19,9 +19,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npm.taobao.org/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samwangdd/dojo-cli.git"
@@ -57,5 +54,6 @@
     "resolve": "^1.20.0",
     "vue-codemod": "0.0.5",
     "yaml-front-matter": "^4.1.1"
-  }
+  },
+  "gitHead": "bc63ba181eb6de7f197362b08cee7ce210a9bf36"
 }
