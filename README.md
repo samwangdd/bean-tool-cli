@@ -65,7 +65,7 @@
 
 ## TODO
 
-- [ ] script 脚本被覆盖
+- [x] script 脚本被覆盖
 - [ ] 安装依赖，无法显示 loading
 
 ## 参考链接
