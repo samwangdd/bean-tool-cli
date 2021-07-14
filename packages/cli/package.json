@@ -10,7 +10,7 @@
   ],
   "author": "samwangdd <wyysammore@gmail.com>",
   "homepage": "https://github.com/samwangdd/dojo-cli#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/cli.js",
   "directories": {
     "lib": "lib",
@@ -55,5 +55,5 @@
     "vue-codemod": "0.0.5",
     "yaml-front-matter": "^4.1.1"
   },
-  "gitHead": "8fc4e1abd10a7a80a78d7fcdfa94b5c5b3571945"
+  "gitHead": "fcadad7b3a6b5be3998559d02cadc6058a33e7b3"
 }

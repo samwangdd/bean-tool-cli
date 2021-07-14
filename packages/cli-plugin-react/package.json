@@ -4,7 +4,7 @@
   "description": "react template",
   "author": "samwangdd <wyysammore@gmail.com>",
   "homepage": "https://github.com/samwangdd/dojo-cli#readme",
-  "license": "ISC",
+  "license": "MIT",
   "main": "lib/cli-plugin-react.js",
   "directories": {
     "lib": "lib",
@@ -26,5 +26,5 @@
   "bugs": {
     "url": "https://github.com/samwangdd/dojo-cli/issues"
   },
-  "gitHead": "8fc4e1abd10a7a80a78d7fcdfa94b5c5b3571945"
+  "gitHead": "fcadad7b3a6b5be3998559d02cadc6058a33e7b3"
 }
