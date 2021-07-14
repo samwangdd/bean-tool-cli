@@ -1,6 +1,6 @@
 {
   "name": "@mvc/cli",
-  "version": "1.1.4-alpha.0",
+  "version": "1.1.5-alpha.0",
   "description": "mvc cli",
   "bin": {
     "mvc": "bin/mvc.js"
@@ -30,12 +30,12 @@
     "url": "https://github.com/samwangdd/dojo-cli/issues"
   },
   "dependencies": {
-    "@mvc/cli-plugin-babel": "^1.1.4-alpha.0",
-    "@mvc/cli-plugin-linter": "^1.1.4-alpha.0",
-    "@mvc/cli-plugin-router": "^1.1.4-alpha.0",
-    "@mvc/cli-plugin-vue": "^1.1.4-alpha.0",
-    "@mvc/cli-plugin-vuex": "^1.1.4-alpha.0",
-    "@mvc/cli-plugin-webpack": "^1.1.4-alpha.0",
+    "@mvc/cli-plugin-babel": "^1.1.5-alpha.0",
+    "@mvc/cli-plugin-linter": "^1.1.5-alpha.0",
+    "@mvc/cli-plugin-router": "^1.1.5-alpha.0",
+    "@mvc/cli-plugin-vue": "^1.1.5-alpha.0",
+    "@mvc/cli-plugin-vuex": "^1.1.5-alpha.0",
+    "@mvc/cli-plugin-webpack": "^1.1.5-alpha.0",
     "chalk": "^4.1.0",
     "commander": "^7.0.0",
     "deepmerge": "^4.2.2",
