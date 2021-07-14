@@ -1,6 +1,6 @@
 {
   "name": "@mvc/cli-plugin-babel",
-  "version": "1.1.1-alpha.0",
+  "version": "1.1.2-alpha.0",
   "description": "> TODO: description",
   "author": "samwangdd <wyysammore@gmail.com>",
   "homepage": "https://github.com/samwangdd/dojo-cli#readme",
@@ -23,5 +23,5 @@
   "bugs": {
     "url": "https://github.com/samwangdd/dojo-cli/issues"
   },
-  "gitHead": "bc63ba181eb6de7f197362b08cee7ce210a9bf36"
+  "gitHead": "14020ce0b4c1e2fefd818cebfc56a2751b737e3b"
 }
