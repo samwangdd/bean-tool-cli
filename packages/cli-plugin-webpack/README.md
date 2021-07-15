@@ -1,11 +1,11 @@
-# `@mvc/cli-plugin-webpack`
+# `@samwangdd/cli-plugin-webpack`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cliPluginWebpack = require('@mvc/cli-plugin-webpack');
+const cliPluginWebpack = require('@samwangdd/cli-plugin-webpack');
 
 // TODO: DEMONSTRATE API
 ```

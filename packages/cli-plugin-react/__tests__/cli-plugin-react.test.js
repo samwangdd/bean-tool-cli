@@ -2,6 +2,6 @@
 
 const cliPluginReact = require('..');
 
-describe('@mvc/cli-plugin-react', () => {
-  it('needs tests');
+describe('@samwangdd/cli-plugin-react', () => {
+    it('needs tests');
 });

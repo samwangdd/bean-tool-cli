@@ -1,5 +1,5 @@
 {
-  "name": "@mvc/cli",
+  "name": "@samwangdd/cli",
   "version": "1.1.6-alpha.0",
   "description": "mvc cli",
   "bin": {
@@ -30,12 +30,12 @@
     "url": "https://github.com/samwangdd/dojo-cli/issues"
   },
   "dependencies": {
-    "@mvc/cli-plugin-babel": "^1.1.6-alpha.0",
-    "@mvc/cli-plugin-linter": "^1.1.6-alpha.0",
-    "@mvc/cli-plugin-router": "^1.1.6-alpha.0",
-    "@mvc/cli-plugin-vue": "^1.1.6-alpha.0",
-    "@mvc/cli-plugin-vuex": "^1.1.6-alpha.0",
-    "@mvc/cli-plugin-webpack": "^1.1.6-alpha.0",
+    "@samwangdd/cli-plugin-babel": "^1.1.6-alpha.0",
+    "@samwangdd/cli-plugin-linter": "^1.1.6-alpha.0",
+    "@samwangdd/cli-plugin-react": "^1.1.6-alpha.0",
+    "@samwangdd/cli-plugin-router": "^1.1.6-alpha.0",
+    "@samwangdd/cli-plugin-vue": "^1.1.6-alpha.0",
+    "@samwangdd/cli-plugin-vuex": "^1.1.6-alpha.0",
     "chalk": "^4.1.0",
     "commander": "^7.0.0",
     "deepmerge": "^4.2.2",
@@ -55,5 +55,7 @@
     "vue-codemod": "0.0.5",
     "yaml-front-matter": "^4.1.1"
   },
-  "gitHead": "fcadad7b3a6b5be3998559d02cadc6058a33e7b3"
+  "publishConfig": {
+    "access": "public"
+  }
 }

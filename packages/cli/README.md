@@ -1,11 +1,11 @@
-# `@mvc/cli`
+# `@samwangdd/cli`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cli = require('@mvc/cli');
+const cli = require('@samwangdd/cli');
 
 // TODO: DEMONSTRATE API
 ```

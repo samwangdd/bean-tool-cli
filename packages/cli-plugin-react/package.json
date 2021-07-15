@@ -1,5 +1,5 @@
 {
-  "name": "@mvc/cli-plugin-react",
+  "name": "@samwangdd/cli-plugin-react",
   "version": "1.1.6-alpha.0",
   "description": "react template",
   "author": "samwangdd <wyysammore@gmail.com>",
@@ -25,6 +25,5 @@
   },
   "bugs": {
     "url": "https://github.com/samwangdd/dojo-cli/issues"
-  },
-  "gitHead": "fcadad7b3a6b5be3998559d02cadc6058a33e7b3"
+  }
 }

@@ -1,11 +1,11 @@
-# `@mvc/cli-plugin-react`
+# `@samwangdd/cli-plugin-react`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cliPluginReact = require('@mvc/cli-plugin-react');
+const cliPluginReact = require('@samwangdd/cli-plugin-react');
 
 // TODO: DEMONSTRATE API
 ```

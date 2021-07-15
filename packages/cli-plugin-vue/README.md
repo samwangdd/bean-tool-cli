@@ -1,11 +1,11 @@
-# `@mvc/cli-plugin-vue`
+# `@samwangdd/cli-plugin-vue`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cliPluginVue = require('@mvc/cli-plugin-vue');
+const cliPluginVue = require('@samwangdd/cli-plugin-vue');
 
 // TODO: DEMONSTRATE API
 ```

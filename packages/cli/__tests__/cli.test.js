@@ -2,6 +2,6 @@
 
 const cli = require('..');
 
-describe('@mvc/cli', () => {
+describe('@samwangdd/cli', () => {
     it('needs tests');
 });

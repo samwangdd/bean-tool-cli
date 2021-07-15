@@ -1,11 +1,11 @@
-# `@mvc/cli-plugin-router`
+# `@samwangdd/cli-plugin-router`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cliPluginRouter = require('@mvc/cli-plugin-router');
+const cliPluginRouter = require('@samwangdd/cli-plugin-router');
 
 // TODO: DEMONSTRATE API
 ```

@@ -1,11 +1,11 @@
-# `@mvc/cli-plugin-babel`
+# `@samwangdd/cli-plugin-babel`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cliPluginBabel = require('@mvc/cli-plugin-babel');
+const cliPluginBabel = require('@samwangdd/cli-plugin-babel');
 
 // TODO: DEMONSTRATE API
 ```

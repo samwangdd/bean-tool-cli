@@ -1,11 +1,11 @@
-# `@mvc/cli-plugin-linter`
+# `@samwangdd/cli-plugin-linter`
 
 > TODO: description
 
 ## Usage
 
 ```
-const cliPluginLinter = require('@mvc/cli-plugin-linter');
+const cliPluginLinter = require('@samwangdd/cli-plugin-linter');
 
 // TODO: DEMONSTRATE API
 ```
