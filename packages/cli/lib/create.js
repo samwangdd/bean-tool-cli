@@ -5,15 +5,16 @@ const chalk = require('chalk');
 const PromptModuleAPI = require('./PromptModuleApi');
 const Creator = require('./Creator');
 const Generator = require('./Generator');
-const clearConsole = require('./utils/clearConsole');
-const executeCommand = require('./utils/executeCommand');
-const { savePreset, rcPath } = require('./utils/options');
+const PackageManager = require('./PackageManager');
 const { log } = require('./utils/logger');
+const { savePreset, rcPath } = require('./utils/options');
+const clearConsole = require('./utils/clearConsole');
+const writeFileTree = require('./utils/writeFileTree');
 
 async function create(name) {
   // 清空控制台
   clearConsole();
-  // 判断项目是否存在，选择覆盖/合并
+  // 判断项目文件是否存在，选择覆盖/合并
   const targetDir = path.join(process.cwd(), name);
   if (fs.existsSync(targetDir)) {
     const { action } = await inquirer.prompt([
@@ -73,18 +74,38 @@ async function create(name) {
     devDependencies: {},
   };
 
-  // 生成模版
-  const generator = new Generator(pkg, path.join(process.cwd(), name));
-  answers.features && answers.features.unshift('vue', 'webpack');
+  const pm = new PackageManager(targetDir, answers.PackageManager);
+
+  // 添加 plugin-service 模块
+  answers.features && answers.features.unshift('service');
   answers.features &&
     answers.features.forEach(feature => {
-      require(`@mvc/cli-plugin-${feature}/generator`)(generator, answers);
+      if (feature !== 'service') {
+        pkg.devDependencies[`@samwangdd/cli-plugin-${feature}`] = '~1.0.0';
+      } else {
+        pkg.devDependencies[`@samwangdd/cli-plugin-service`] = '~1.0.0';
+      }
     });
+
+  await writeFileTree(targetDir, {
+    'package.json': JSON.stringify(pkg, null, 2),
+  });
+
+  await pm.install();
+
+  // 生成模版
+  const generator = new Generator(pkg, targetDir);
+  answers.features.forEach(feature => {
+    if (feature !== 'service') {
+      require(`@samwangdd/cli-plugin-${feature}/generator`)(generator, answers);
+    } else {
+      require(`@samwangdd/cli-service/generator`)(generator, answers);
+    }
+  });
   await generator.generate();
 
   // TODO: 添加 loading
-  console.log('\n正在下载依赖 ……\n');
-  await executeCommand('npm', ['install'], path.join(process.cwd(), name));
+  await pm.install();
   log(chalk.green(`\n依赖下载完成！执行下列命令开始开发：\n`));
   log(`cd ${name}`);
   log(`npm run dev`);
