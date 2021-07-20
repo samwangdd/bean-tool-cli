@@ -81,9 +81,9 @@ async function create(name) {
   answers.features &&
     answers.features.forEach(feature => {
       if (feature !== 'service') {
-        pkg.devDependencies[`@samwangdd/cli-plugin-${feature}`] = '~1.0.0';
+        pkg.devDependencies[`@samwangdd/cli-plugin-${feature}`] = '^1.0.0';
       } else {
-        pkg.devDependencies[`@samwangdd/cli-plugin-service`] = '~1.0.0';
+        pkg.devDependencies[`@samwangdd/cli-plugin-service`] = '^1.0.0';
       }
     });
 

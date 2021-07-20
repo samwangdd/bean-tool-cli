@@ -12,7 +12,6 @@ module.exports = function executeCommand(command, args, cwd) {
       if (/warning/.test(str)) {
         return;
       }
-
       process.stdout.write(buffer);
     });
 
@@ -21,7 +20,6 @@ module.exports = function executeCommand(command, args, cwd) {
         reject(new Error(`command failed: ${command}`));
         return;
       }
-
       resolve();
     });
   });
