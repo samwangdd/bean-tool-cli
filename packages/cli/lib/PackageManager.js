@@ -12,7 +12,11 @@ class PackageManager {
   }
 
   async runCommand(command) {
-    await executeCommand(this.bin, [command], this.context);
+    try {
+      await executeCommand(this.bin, [command], this.context);
+    } catch (error) {
+      console.log('runCommand :>> ', error);
+    }
   }
 
   async install() {

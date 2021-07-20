@@ -15,7 +15,7 @@ async function add(name) {
     answers = await inquirer.prompt(pluginPrompts);
     // }
   } catch (error) {
-    // FIXME: prompts.js 不存在会抛错
+    // FIXME: prompts.js 如果不存在会抛错
     // console.log('Action add: ', error);
   }
 

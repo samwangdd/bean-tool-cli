@@ -73,7 +73,7 @@ async function create(name) {
     dependencies: {},
     devDependencies: {},
   };
-
+  // TODO: PackageManager 没有完成
   const pm = new PackageManager(targetDir, answers.PackageManager);
 
   // 添加 plugin-service 模块
@@ -99,7 +99,7 @@ async function create(name) {
     if (feature !== 'service') {
       require(`@samwangdd/cli-plugin-${feature}/generator`)(generator, answers);
     } else {
-      require(`@samwangdd/cli-service/generator`)(generator, answers);
+      require(`@samwangdd/cli-plugin-service/generator`)(generator, answers);
     }
   });
   await generator.generate();
