@@ -4,7 +4,7 @@
   "description": "> TODO: description",
   "author": "samwangdd <wyysammore@gmail.com>",
   "bin": {
-    "@samwangdd/cli-plugin-service": "bin/service.js"
+    "cli-plugin-service": "bin/service.js"
   },
   "homepage": "https://github.com/samwangdd/dojo-cli#readme",
   "license": "MIT",

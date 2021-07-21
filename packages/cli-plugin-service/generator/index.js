@@ -3,8 +3,8 @@ module.exports = (generator, options = {}) => {
 
   generator.extendPackage({
     scripts: {
-      serve: '@samwangdd/cli-plugin-service serve',
-      build: '@samwangdd/cli-plugin-service build',
+      serve: 'cli-plugin-service serve',
+      build: 'cli-plugin-service build',
     },
     dependencies: {
       vue: '^2.6.12',
