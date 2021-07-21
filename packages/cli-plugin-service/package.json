@@ -1,6 +1,6 @@
 {
   "name": "@samwangdd/cli-plugin-service",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "> TODO: description",
   "author": "samwangdd <wyysammore@gmail.com>",
   "bin": {
