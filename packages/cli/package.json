@@ -1,6 +1,6 @@
 {
   "name": "@samwangdd/cli",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "mvc cli",
   "bin": {
     "mvc": "bin/mvc.js"
@@ -34,7 +34,7 @@
     "@samwangdd/cli-plugin-linter": "^1.1.6",
     "@samwangdd/cli-plugin-react": "^1.1.6",
     "@samwangdd/cli-plugin-router": "^1.1.6",
-    "@samwangdd/cli-plugin-service": "^1.1.8",
+    "@samwangdd/cli-plugin-service": "^1.1.9",
     "@samwangdd/cli-plugin-vue": "^1.1.6",
     "@samwangdd/cli-plugin-vuex": "^1.1.6",
     "chalk": "^4.1.0",
