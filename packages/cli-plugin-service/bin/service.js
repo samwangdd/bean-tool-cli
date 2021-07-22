@@ -6,7 +6,7 @@ const buildConfig = require('../lib/pro.config');
 
 // 获取 shell 命令参数
 const args = process.argv.slice(2);
-
+console.log('args :>> ', args);
 if (args[0] === 'serve') {
   const compiler = webpack(devConfig);
   const server = new WebpackDevServer(compiler);

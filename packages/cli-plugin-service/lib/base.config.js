@@ -7,11 +7,11 @@ const WebpackBar = require('webpackbar');
 const resolve = filePath => path.resolve(__dirname, filePath);
 
 module.exports = {
-  entry: resolve('../src/main.js'),
+  entry: resolve('./src/main.js'),
   resolve: {
     extensions: ['.js', '.vue', '.json', '.css'],
     alias: {
-      '@': resolve('../src'),
+      '@': resolve('./src'),
     },
   },
   module: {
